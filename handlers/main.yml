@@ -1,0 +1,7 @@
+---
+# handlers file for sample-role
+- name: Restart packages
+  service:
+    name: "{{item.name}}"
+    state: restarted
+  loop: "{{web_packages}}"

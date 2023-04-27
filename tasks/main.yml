@@ -1,0 +1,13 @@
+---
+# tasks file for sample-role
+- name: check disk space.
+  shell: df -h /
+  register: disk_space
+- name: update packages
+  apt:
+    update_cache: yes
+- name: update package lsit
+  apt:
+    name: "{{item.name}}"
+    state: present
+  loop: "{{web_packages}}"

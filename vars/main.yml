@@ -1,0 +1,10 @@
+---
+# vars file for sample-role
+web_packages: 
+ - name: nginx
+   config_file: /etc/nginx/nginx.conf
+   config_template: /home/ubuntu/ansible/nginx.conf
+
+ - name: apache2
+   config_file: /etc/apache2/apache2.conf
+   config_template: /home/ubuntu/ansible/apache2.conf

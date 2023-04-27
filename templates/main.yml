@@ -1,0 +1,6 @@
+- name: Update configuration file.
+  template:
+    src: "{{item.config_template}}"
+    dest: "{{item.config_file}}"
+    mode: "0644"
+  loop: "{{web_packages}}"
